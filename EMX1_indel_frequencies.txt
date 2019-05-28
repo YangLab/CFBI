@@ -1,2 +1,0 @@
-EMX1	all_reads	266469
-EMX1	indel_reads	1601
