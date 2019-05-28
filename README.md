@@ -3,8 +3,7 @@
 
 # Features
 
-Measure transcription elongation rates (TERs) with 4sUDRB-Seq.  
-Different time points should be calculated separately.
+Calaulate base substitution and indel frequencies of target gene for CRISPR genome editing.
 
 # BAM format file
 
@@ -17,16 +16,15 @@ SAM file was originally mapped form BWA-MEM.
 * [Perl](https://www.perl.org/) v5.26.2
 * [BWA](http://bio-bwa.sourceforge.net/) Version: 0.7.17
 * [SAMtools](http://samtools.sourceforge.net/) Version: 1.9
-* [htslib] (http://www.htslib.org/) v1.9
 * [BioPerl] (https://bioperl.org/)
 * [GNU coreutils](http://www.gnu.org/licenses/gpl.html)
 
 #Usage: 
 
 -----------------------------------
-To calculate base substitution and indel frequencies, BAM format file was provided firstly.
+To calculate base substitution and indel frequencies, BAM format file was generated firstly.
 
-All C++ and shell scripts were marked ***'bold italic'***.
+All Perl and Shell scripts were marked ***'bold italic'***.
 * 1. Please export the CRISPRtarget directory and BioPerl to your **$PATH**.
 ```bash or zsh
 export PATH="~/CRISPRtarget-master:$PATH";
@@ -35,36 +33,39 @@ export PATH="~/Bio:$PATH";
 ```
 
 * 2. BWA index target sequences. 
-***'BWA index'***.
+
+***'01_bwa_mem_index.sh'***.
 ```bash
 sh 01_bwa_mem_index.sh target.fa
 ```
 
 * 3. BWA-MEM mapping with DNA-seq reads (FASTQ). For paired-end sequencing, only R1 reads were used.
-***'BWA-MEM mapping'***.
+
+***'02_bwa_mem_mapping.sh'***.
 ```bash
 sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
-**'sample_R1.bam'** is an example result of BWA-MEM alignment.
 ```
+**'sample_R1.bam'** is an example result of BWA-MEM alignment.
 
 * 4. Calculate base substitution with mapped reads (BAM).
-***'Calculate base substitution'***.
+
+***'03_base_substitution.sh'***.
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
-**'sample_R1.xls'** is an example result of base substitution.
 ```
+**'sample_R1.xls'** is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
-***'Calculate indel frequencies'***.
+
+***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
-**'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
 ```
+**'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
-##Note
-##Input
+##Note input files
 1. Target sequences. [target.fa]
 2. DNA-seq R1 reads, FASTQ file. [sample_R1.fq]
 3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
@@ -74,7 +75,7 @@ sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 6. The sequence quality of reads by ASCII code. [ascii.txt]
 
 
-##Output
+##Output files
 
 See details in [sample_R1.xls, the example output file for base substitution].
 
@@ -110,5 +111,5 @@ See details in [sample_R1.xls, the example output file for base substitution].
 
 ##License
 
-Copyright (C) 2016-2019 YangLab.
+Copyright (C) 2019 YangLab.
 file for license rights and limitations (MIT).
