@@ -49,14 +49,14 @@ sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
 ```
-Output file **'sample_R1.xls'** is an example result of base substitution.
+* Output file **'sample_R1.xls'** is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
 ***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 ```
-Output file **'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
+* Output file **'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
@@ -111,7 +111,6 @@ See details in [EMX1_indel_frequencies.txt, the example output file for indel fr
 ##Citation
 
 **The related paper about CRISPRtarget is submitted.**
-**The full codes will be available here afterwards.**
 
 ##License
 
