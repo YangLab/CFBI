@@ -21,7 +21,6 @@ SAM file was originally mapped form BWA-MEM.
 * [GNU coreutils](http://www.gnu.org/licenses/gpl.html)
 
 # Usage: 
-
 -----------------------------------
 To calculate base substitution and indel frequencies, BAM format file was generated firstly.
 
@@ -50,18 +49,18 @@ sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
 ```
-*Output file **sample_R1.xls** is an example result of base substitution.
+Output file **sample_R1.xls**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls) is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
 ***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 ```
-*Output file **EMX1_indel_frequencies.txt** is an example for the number of indel frequencies of target EMX1.
+Output file **EMX1_indel_frequencies.txt**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt) is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
-## Input files
+# Input files
 1. Target sequences. [target.fa]
 2. DNA-seq R1 reads, FASTQ file. [sample_R1.fq]
 3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
@@ -71,9 +70,8 @@ sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 6. The sequence quality of reads by ASCII code. [ascii.txt]
 
 
-## Output files
-
-See details in [sample_R1.xls, the example output file for base substitution].
+# Output files
+See details in [sample_R1.xls(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls), the example output file for base substitution].
 
 | Field       	          | Description                                  |
 | :---------------------: | :------------------------------------------: |
@@ -95,7 +93,7 @@ See details in [sample_R1.xls, the example output file for base substitution].
 | # of mutant T           | Number of reads for mutant T	               |
 | % of mutant T           | Ratio of reads for mutant T	                 |
 
-See details in [EMX1_indel_frequencies.txt, the example output file for indel frequencies].
+See details in [EMX1_indel_frequencies.txt(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt), the example output file for indel frequencies].
 
 | Field       	          | Description                                  |
 | :---------------------: | :------------------------------------------: |
@@ -104,10 +102,10 @@ See details in [EMX1_indel_frequencies.txt, the example output file for indel fr
 | # of reads       	      | Number of all reads or indel reads   	       |
 
 
-## Citation
+# Citation
 
 **The related paper about CRISPRtarget is submitted.**
 
-## License
+# License
 
 Copyright (C) 2019 YangLab. Licensed GPLv3 for open source use or contact YangLab (yanglab@picb.ac.cn) for commercial use.
