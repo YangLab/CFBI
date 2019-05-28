@@ -17,6 +17,7 @@ SAM file was originally mapped form BWA-MEM.
 * [BioPerl](https://bioperl.org/) v1.7.2
 * [BWA](http://bio-bwa.sourceforge.net/) Version: 0.7.17
 * [SAMtools](http://samtools.sourceforge.net/) Version: 1.9
+* [GCC](https://gcc.gnu.org/)
 * [GNU coreutils](http://www.gnu.org/licenses/gpl.html)
 
 #Usage: 
@@ -104,8 +105,7 @@ See details in [EMX1_indel_frequencies.txt, the example output file for indel fr
 
 ##Requirements
 
-* [GCC] gcc version 4.6.1
-* [BioPerl] (https://bioperl.org/)
+
 
 
 ##Citation
