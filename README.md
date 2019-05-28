@@ -61,12 +61,12 @@ Output file [**EMX1_indel_frequencies.txt**](https://github.com/xueweireally/CRI
 -----------------------------------
 
 # Input files
-1. Target sequences with FASTQ format. [target.fa]
-2. DNA-seq R1 reads with FASTQ format. [sample_R1.fq]
-3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
-4. Target gene symbol. [EMX1]
-5. Start location for indel frequencies calculation of target gene. [250, cutting site -25 bp for EMX1]
-5. End location for indel frequencies calculation of target gene. [300, cutting site +25 bp for EMX1]
+1. Target sequences with FASTQ format. (target.fa)
+2. DNA-seq R1 reads with FASTQ format. (sample_R1.fq)
+3. Name of BAM file. (sample_R1)
+4. Target gene symbol. (EMX1)
+5. Start location for indel frequencies calculation of target gene. (250, cutting site -25 bp for EMX1)
+5. End location for indel frequencies calculation of target gene. (300, cutting site +25 bp for EMX1)
 6. The sequence quality of reads by ASCII code. [ascii.txt](https://github.com/xueweireally/CRISPRtarget/blob/master/ascii.txt)
 
 
