@@ -1,0 +1,114 @@
+# CRISPRtarget
+**CRISPRtarget** is custom Perl and Shell scripts for base substitution and indel frequencies calculation.
+
+# Features
+
+Measure transcription elongation rates (TERs) with 4sUDRB-Seq.  
+Different time points should be calculated separately.
+
+# BAM format file
+
+SAM file was originally mapped form BWA-MEM.
+
+# Prerequisites
+
+**Software / Package**
+
+* [Perl](https://www.perl.org/) v5.26.2
+* [BWA](http://bio-bwa.sourceforge.net/) Version: 0.7.17
+* [SAMtools](http://samtools.sourceforge.net/) Version: 1.9
+* [htslib] (http://www.htslib.org/) v1.9
+* [BioPerl] (https://bioperl.org/)
+* [GNU coreutils](http://www.gnu.org/licenses/gpl.html)
+
+#Usage: 
+
+-----------------------------------
+To calculate base substitution and indel frequencies, BAM format file was provided firstly.
+
+All C++ and shell scripts were marked ***'bold italic'***.
+* 1. Please export the CRISPRtarget directory and BioPerl to your **$PATH**.
+```bash or zsh
+export PATH="~/CRISPRtarget-master:$PATH";
+export PATH="~/Bio:$PATH";
+
+```
+
+* 2. BWA index target sequences. 
+***'BWA index'***.
+```bash
+sh 01_bwa_mem_index.sh target.fa
+```
+
+* 3. BWA-MEM mapping with DNA-seq reads (FASTQ). For paired-end sequencing, only R1 reads were used.
+***'BWA-MEM mapping'***.
+```bash
+sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
+**'sample_R1.bam'** is an example result of BWA-MEM alignment.
+```
+
+* 4. Calculate base substitution with mapped reads (BAM).
+***'Calculate base substitution'***.
+```bash
+sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
+**'sample_R1.xls'** is an example result of base substitution.
+```
+
+* 5. Calculate indel frequencies with target gene InDel location.
+***'Calculate indel frequencies'***.
+```bash
+sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
+**'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
+```
+
+-----------------------------------
+
+##Note
+##Input
+1. Target sequences. [target.fa]
+2. DNA-seq R1 reads, FASTQ file. [sample_R1.fq]
+3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
+4. Target gene symbol. [EMX1]
+5. Start location for indel frequencies calculation of target gene. [250, cutting site -25 bp for EMX1]
+5. End location for indel frequencies calculation of target gene. [300, cutting site +25 bp for EMX1]
+6. The sequence quality of reads by ASCII code. [ascii.txt]
+
+
+##Output
+
+See details in [sample_R1.xls, the example output file for base substitution].
+
+| Field       	          | Description                                  |
+| :---------------------: | :------------------------------------------: |
+| Gene symbol  	          | Name of gene                                 |
+| Mut location    	  | Location of mutant site                      |
+| Ref base       	  | Sequence of base   	                         |
+| Flanking base           | ± 1 bp flanking sequence of base	         |
+| # of mapped reads       | Number of mapped reads for target gene       |
+| # of total mutant reads | Number of total mutant reads for target gene |
+| % of total mutant reads | Ratio of total mutant reads for target gene	 |
+| # of mutant A           | Number of reads for mutant A	         |
+| % of mutant A           | Ratio of reads for mutant A	                 |
+| # of mutant C           | Number of reads for mutant C	         |
+| % of mutant C           | Ratio of reads for mutant C	                 |
+| # of mutant G           | Number of reads for mutant G	         |
+| % of mutant G           | Ratio of reads for mutant G	                 |
+| # of mutant N           | Number of reads for mutant N	         |
+| % of mutant N           | Ratio of reads for mutant N	                 |
+| # of mutant T           | Number of reads for mutant T	         |
+| % of mutant T           | Ratio of reads for mutant T	                 |
+
+##Requirements
+
+* [GCC] gcc version 4.6.1
+* [BioPerl] (https://bioperl.org/)
+
+
+##Citation
+
+**[The related paper about CRISPRtarget is submitted, the full codes will be available here afterwards.]**
+
+##License
+
+Copyright (C) 2016-2019 YangLab.
+file for license rights and limitations (MIT).
