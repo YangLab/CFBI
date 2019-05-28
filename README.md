@@ -104,7 +104,7 @@ See details in [EMX1_indel_frequencies.txt](https://github.com/xueweireally/CRIS
 
 # Citation
 
-**The related paper about CRISPRtarget is submitted.**
+*The related paper about CRISPRtarget is submitted.
 
 # License
 
