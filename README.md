@@ -49,14 +49,14 @@ sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
 ```
-Output file **sample_R1.xls**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls) is an example result of base substitution.
+Output file **[sample_R1.xls]**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls) is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
 ***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 ```
-Output file **EMX1_indel_frequencies.txt**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt) is an example for the number of indel frequencies of target EMX1.
+Output file **[EMX1_indel_frequencies.txt]**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt) is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
@@ -71,7 +71,7 @@ Output file **EMX1_indel_frequencies.txt**(https://github.com/xueweireally/CRISP
 
 
 # Output files
-See details in [sample_R1.xls(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls), the example output file for base substitution].
+See details in [sample_R1.xls](https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls), the example output file for base substitution.
 
 | Field       	          | Description                                  |
 | :---------------------: | :------------------------------------------: |
@@ -93,7 +93,7 @@ See details in [sample_R1.xls(https://github.com/xueweireally/CRISPRtarget/blob/
 | # of mutant T           | Number of reads for mutant T	               |
 | % of mutant T           | Ratio of reads for mutant T	                 |
 
-See details in [EMX1_indel_frequencies.txt(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt), the example output file for indel frequencies].
+See details in [EMX1_indel_frequencies.txt](https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt), the example output file for indel frequencies.
 
 | Field       	          | Description                                  |
 | :---------------------: | :------------------------------------------: |
