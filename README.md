@@ -7,7 +7,7 @@ Calaulate base substitution and indel frequencies of target gene for CRISPR geno
 
 # BAM format file
 
-SAM file was originally mapped form BWA-MEM.
+BAM file was originally mapped form BWA-MEM.
 
 # Prerequisites
 
