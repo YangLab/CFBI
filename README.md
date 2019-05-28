@@ -14,9 +14,9 @@ SAM file was originally mapped form BWA-MEM.
 **Software / Package**
 
 * [Perl](https://www.perl.org/) v5.26.2
+* [BioPerl](https://bioperl.org/) v1.7.2
 * [BWA](http://bio-bwa.sourceforge.net/) Version: 0.7.17
 * [SAMtools](http://samtools.sourceforge.net/) Version: 1.9
-* [BioPerl] (https://bioperl.org/)
 * [GNU coreutils](http://www.gnu.org/licenses/gpl.html)
 
 #Usage: 
@@ -43,7 +43,6 @@ sh 01_bwa_mem_index.sh target.fa
 ```bash
 sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 ```
-**'sample_R1.bam'** is an example result of BWA-MEM alignment.
 
 * 4. Calculate base substitution with mapped reads (BAM).
 ***'03_base_substitution.sh'***.
@@ -61,7 +60,7 @@ Output file **'EMX1_indel_frequencies.txt'** is an example for the number of ind
 
 -----------------------------------
 
-##Note input files
+##Input files
 1. Target sequences. [target.fa]
 2. DNA-seq R1 reads, FASTQ file. [sample_R1.fq]
 3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
@@ -78,22 +77,30 @@ See details in [sample_R1.xls, the example output file for base substitution].
 | Field       	          | Description                                  |
 | :---------------------: | :------------------------------------------: |
 | Gene symbol  	          | Name of gene                                 |
-| Mut location    	  | Location of mutant site                      |
-| Ref base       	  | Sequence of base   	                         |
-| Flanking base           | ± 1 bp flanking sequence of base	         |
+| Mut location    	      | Location of mutant site                      |
+| Ref base       	        | Sequence of base   	                         |
+| Flanking base           | ± 1 bp flanking sequence of base	           |
 | # of mapped reads       | Number of mapped reads for target gene       |
 | # of total mutant reads | Number of total mutant reads for target gene |
 | % of total mutant reads | Ratio of total mutant reads for target gene	 |
-| # of mutant A           | Number of reads for mutant A	         |
+| # of mutant A           | Number of reads for mutant A	               |
 | % of mutant A           | Ratio of reads for mutant A	                 |
-| # of mutant C           | Number of reads for mutant C	         |
+| # of mutant C           | Number of reads for mutant C	               |
 | % of mutant C           | Ratio of reads for mutant C	                 |
-| # of mutant G           | Number of reads for mutant G	         |
+| # of mutant G           | Number of reads for mutant G	               |
 | % of mutant G           | Ratio of reads for mutant G	                 |
-| # of mutant N           | Number of reads for mutant N	         |
+| # of mutant N           | Number of reads for mutant N	               |
 | % of mutant N           | Ratio of reads for mutant N	                 |
-| # of mutant T           | Number of reads for mutant T	         |
+| # of mutant T           | Number of reads for mutant T	               |
 | % of mutant T           | Ratio of reads for mutant T	                 |
+
+See details in [EMX1_indel_frequencies.txt, the example output file for indel frequencies].
+
+| Field       	          | Description                                  |
+| :---------------------: | :------------------------------------------: |
+| Gene symbol  	          | Name of gene                                 |
+| Type of reads    	      | Type of all reads or indel reads             |
+| # of reads       	      | Number of all reads or indel reads   	       |
 
 ##Requirements
 
@@ -103,9 +110,9 @@ See details in [sample_R1.xls, the example output file for base substitution].
 
 ##Citation
 
-**[The related paper about CRISPRtarget is submitted, the full codes will be available here afterwards.]**
+**The related paper about CRISPRtarget is submitted.**
+**The full codes will be available here afterwards.**
 
 ##License
 
-Copyright (C) 2019 YangLab.
-file for license rights and limitations (MIT).
+Copyright (C) 2019 YangLab. Licensed GPLv3 for open source use or contact YangLab (yanglab@picb.ac.cn) for commercial use.
