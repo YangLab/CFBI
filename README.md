@@ -67,7 +67,7 @@ Output file [**EMX1_indel_frequencies.txt**](https://github.com/xueweireally/CRI
 4. Target gene symbol. [EMX1]
 5. Start location for indel frequencies calculation of target gene. [250, cutting site -25 bp for EMX1]
 5. End location for indel frequencies calculation of target gene. [300, cutting site +25 bp for EMX1]
-6. The sequence quality of reads by ASCII code. [ascii.txt]
+6. The sequence quality of reads by ASCII code. [ascii.txt](https://github.com/xueweireally/CRISPRtarget/blob/master/ascii.txt)
 
 
 # Output files
