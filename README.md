@@ -33,14 +33,12 @@ export PATH="~/Bio:$PATH";
 ```
 
 * 2. BWA index target sequences. 
-
 ***'01_bwa_mem_index.sh'***.
 ```bash
 sh 01_bwa_mem_index.sh target.fa
 ```
 
 * 3. BWA-MEM mapping with DNA-seq reads (FASTQ). For paired-end sequencing, only R1 reads were used.
-
 ***'02_bwa_mem_mapping.sh'***.
 ```bash
 sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
@@ -48,20 +46,18 @@ sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 **'sample_R1.bam'** is an example result of BWA-MEM alignment.
 
 * 4. Calculate base substitution with mapped reads (BAM).
-
 ***'03_base_substitution.sh'***.
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
 ```
-**'sample_R1.xls'** is an example result of base substitution.
+Output file **'sample_R1.xls'** is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
-
 ***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 ```
-**'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
+Output file **'EMX1_indel_frequencies.txt'** is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
