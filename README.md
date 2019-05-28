@@ -49,20 +49,20 @@ sh 02_bwa_mem_mapping.sh target.fa sample_R1.fq sample_R1
 ```bash
 sh 03_base_substitution.sh sample_R1.bam target.fa sample_R1
 ```
-Output file **[sample_R1.xls]**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls) is an example result of base substitution.
+Output file [**sample_R1.xls**](https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/sample_R1.xls) is an example result of base substitution.
 
 * 5. Calculate indel frequencies with target gene InDel location.
 ***'04_indel_frequencies.sh'***.
 ```bash
 sh 04_indel_frequencies.sh sample_R1.bam EXM1 250 300 ascii.txt
 ```
-Output file **[EMX1_indel_frequencies.txt]**(https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt) is an example for the number of indel frequencies of target EMX1.
+Output file [**EMX1_indel_frequencies.txt**](https://github.com/xueweireally/CRISPRtarget/blob/master/example_output/EMX1_indel_frequencies.txt) is an example for the number of indel frequencies of target EMX1.
 
 -----------------------------------
 
 # Input files
-1. Target sequences. [target.fa]
-2. DNA-seq R1 reads, FASTQ file. [sample_R1.fq]
+1. Target sequences with FASTQ format. [target.fa]
+2. DNA-seq R1 reads with FASTQ format. [sample_R1.fq]
 3. Name of BAM file. [sample_R1, sample_R1.bam and sample_R1.bam.bai will be generated]
 4. Target gene symbol. [EMX1]
 5. Start location for indel frequencies calculation of target gene. [250, cutting site -25 bp for EMX1]
