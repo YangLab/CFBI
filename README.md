@@ -1,5 +1,5 @@
 # CFBI
-**CFBI (Calculating Frequencies of Base-substitutions and Indels) ** is custom Perl and Shell scripts for base substitution and indel frequencies calculation.
+CFBI (Calculating Frequencies of Base-substitutions and Indels) is the custome Perl and Shell scripts for calculating frequencies of base subsutitution and indels.
 
 # Features
 
