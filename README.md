@@ -25,9 +25,9 @@ BAM file was originally mapped form BWA-MEM.
 To calculate base substitution and indel frequencies, BAM format file was generated firstly.
 
 All Perl and Shell scripts were marked ***'bold italic'***.
-* 1. Please export the CRISPRtarget directory and BioPerl to your **$PATH**.
+* 1. Please export the CFBI directory and BioPerl to your **$PATH**.
 ```bash or zsh
-export PATH="~/CRISPRtarget-master:$PATH";
+export PATH="~/CFBI-master:$PATH";
 export PATH="~/Bio:$PATH";
 
 ```
