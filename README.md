@@ -5,7 +5,7 @@ Version: 1.0.0
 
 # Features
 
-Calaulate base substitution and indel frequencies of target gene for CRISPR genome editing.
+Calculate base substitution and indel frequencies of target gene for CRISPR genome editing.
 
 # BAM format file
 
